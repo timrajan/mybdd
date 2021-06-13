@@ -1,0 +1,47 @@
+{
+  "name": "smokebdd",
+  "version": "1.0.0",
+  "description": "this is an upwork project",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rm -f cypress/cucumber-json/* && rm -f merged-test-results.json",
+    "test": "cypress open browser electron",
+    "posttest": "node cucumber-html-report.js && cucumber-json-merge -d cypress/cucumber-json/"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/tests/step_definitions/**",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "keywords": [
+    "bdd",
+    "upwork"
+  ],
+  "author": "timothy rajan alex",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^5.9.0",
+    "cucumber-html-report": "^0.6.5",
+    "cucumber-html-reporter": "^5.4.0",
+    "cucumber-json-merge": "0.0.7",
+    "cypress": "^7.4.0",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "cypress-file-upload": "^5.0.5",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-xpath": "^1.6.2",
+    "faker": "^5.5.3",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "path": "^0.12.7",
+    "pdf-parse": "^1.1.1",
+    "prettier": "^2.2.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.1"
+  }
+}

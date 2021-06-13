@@ -1,0 +1,12 @@
+{
+    "baseUrl": "https://gmail.com",
+    "$schema": "https://on.cypress.io/cypress.schema.json",   
+    "numTestsKeptInMemory":100,
+    "defaultCommandTimeout":60000,
+    "pageLoadTimeout": 60000,
+    "retries": 0,
+    "blockHosts": ["*googletagmanager.com"],
+    "chromeWebSecurity": false,
+    "experimentalStudio": true,
+    "testFiles": "**/*.{feature,features}"
+}
